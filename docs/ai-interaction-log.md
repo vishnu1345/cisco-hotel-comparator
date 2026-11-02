@@ -140,6 +140,8 @@ Committed as `7cc02be`, with `.claude/launch.json` (the browser-pane dev-server 
 
 No source, test, dataset or planning file was changed in Stage 5.
 
+**Human review (Recorded):** the owner asked to "Commit Stage 5"; committed as `d48b3eb` after the same pre-commit checks. The owner then approved a follow-up commit updating this log's commit table.
+
 ---
 
 ## Commit history (Recorded)
@@ -150,7 +152,7 @@ No source, test, dataset or planning file was changed in Stage 5.
 | `d797500` | 2026-11-02 19:57 | Stage 2: Implement domain validation, calculations, and ranking |
 | `6f08ed1` | 2026-11-02 20:01 | Stage 3: Implement React comparator state management |
 | `7cc02be` | 2026-11-02 20:19 | Stage 4: Implement hotel comparison dashboard and UI |
-| — | — | Stage 5 documentation: not yet committed (waiting for owner review) |
+| `d48b3eb` | 2026-11-02 20:28 | Stage 5: Add documentation, screenshots, and test evidence |
 
 Each commit made by Claude Code carries a `Co-Authored-By: Claude Opus 5.5` trailer.
 
