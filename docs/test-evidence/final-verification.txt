@@ -1,0 +1,44 @@
+# Final verification — 2026-11-02 20:22:50 +0530, HEAD 7cc02be
+
+## 1. Supplied dataset unchanged
+$ cmp data/dataset.json src/data/cityData.json
+identical
+$ git diff --stat d8605d0 -- data/dataset.json src/data/cityData.json   (vs Stage 1 baseline commit)
+no changes since Stage 1
+$ git log --oneline -- data/dataset.json src/data/cityData.json
+d8605d0 Stage 1: React + Vite + Vitest project setup
+
+## 2. Dataset counts (read from src/data/cityData.json)
+hotels: 10
+wishlist places: 15 (attractions: 9, food: 6)
+map markers (hotels + places): 25
+travel-time values: 150
+every hotel maps exactly the 15 place IDs: true
+
+## 3. No runtime module imports the test fixture
+$ grep -rnE 'expectedResults|fixtures' src/ --include='*.js' --include='*.jsx'
+src/hooks/useComparator.js:23: * This hook must not import tests/fixtures/expectedResults.json and must not
+src/domain/calculations.js:19: * tests/fixtures/expectedResults.json.
+src/domain/validation.js:17: * tests/fixtures/expectedResults.json.
+src/domain/ranking.js:20: * tests/fixtures/expectedResults.json.
+import lines among these matches: 0
+(The matches above are comments stating the rule. Also enforced by tests/boundaries.test.js — passing in vitest-run.txt.)
+
+## 4. Domain modules unchanged since Stage 2
+$ git diff --stat d797500 -- src/domain
+no changes since Stage 2 commit
+
+## 5. Rendered in the running app (Vite dev server, after "Load Aura City")
+Counted with document.querySelectorAll in the browser:
+hotel markers: 10
+attraction markers: 9
+food markers: 6
+total map markers: 25
+comparison links (inspected hotel only): 15
+ranking rows: 10
+breakdown rows (importance inputs): 15
+travel-time table cells: 150
+recommendation: The Meridian House
+console errors: none
+(Also asserted by tests/Dashboard.test.jsx: "renders all 25 labelled map markers",
+"draws only the inspected hotel's 15 comparison links …", "shows the full 10 × 15 travel-time table".)

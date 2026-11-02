@@ -1,0 +1,2 @@
+$ npx oxlint
+exit code: 0

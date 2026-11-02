@@ -1,0 +1,243 @@
+$ npx vitest run --reporter=verbose
+# Run at 2026-11-02 20:22:28 +0530 on commit 7cc02be (+ uncommitted Stage 5 docs)
+
+
+ RUN  v3.2.7 /Users/vishnu./Desktop/cisco-hotel-comparator
+
+ ✓ tests/setup.test.js > Stage 1 – project setup > test runner is operational 3ms
+ ✓ tests/boundaries.test.js > architecture boundaries > no runtime module imports the expected-results fixture or anything under tests/ 2ms
+ ✓ tests/boundaries.test.js > architecture boundaries > domain modules do not import React or the DOM 0ms
+ ✓ tests/boundaries.test.js > architecture boundaries > calculation and ranking code never reads map coordinates 0ms
+ ✓ tests/calculations.test.js > contribution arithmetic (AC-19) > multiplies importance by round-trip minutes (TC-01, TC-02) 1ms
+ ✓ tests/calculations.test.js > contribution arithmetic (AC-19) > sums contributions into the weighted travel total and averages by total importance (TC-03, TC-04) 0ms
+ ✓ tests/calculations.test.js > round-half-up display (AC-20) > rounds an exact .x5 up: 561 / 20 = 28.05 displays as 28.1 (TC-05) 0ms
+ ✓ tests/calculations.test.js > round-half-up display (AC-20) > rounds other exact half-way values up 0ms
+ ✓ tests/calculations.test.js > round-half-up display (AC-20) > rounds values just below half-way down 0ms
+ ✓ tests/calculations.test.js > round-half-up display (AC-20) > 2492 / 45 displays as 55.4 0ms
+ ✓ tests/calculations.test.js > round-half-up display (AC-20) > 2546 / 45 displays as 56.6 0ms
+ ✓ tests/calculations.test.js > round-half-up display (AC-20) > 1558 / 45 displays as 34.6 0ms
+ ✓ tests/calculations.test.js > round-half-up display (AC-20) > 3456 / 45 displays as 76.8 0ms
+ ✓ tests/calculations.test.js > round-half-up display (AC-20) > 100 / 3 displays as 33.3 0ms
+ ✓ tests/calculations.test.js > round-half-up display (AC-20) > 200 / 3 displays as 66.7 0ms
+ ✓ tests/calculations.test.js > round-half-up display (AC-20) > 499 / 10 displays as 49.9 0ms
+ ✓ tests/calculations.test.js > round-half-up display (AC-20) > 0 / 7 displays as 0.0 0ms
+ ✓ tests/calculations.test.js > round-half-up display (AC-20) > 3396 / 43 displays as 79.0 0ms
+ ✓ tests/calculations.test.js > round-half-up display (AC-20) > always shows exactly one decimal place 0ms
+ ✓ tests/calculations.test.js > contributionDetails > includes every wishlist place, in wishlist order, for every hotel 1ms
+ ✓ tests/calculations.test.js > contributionDetails > exposes importance, supplied minutes and contribution per place 0ms
+ ✓ tests/calculations.test.js > calculateAccessibility on the Aura dataset > uses an importance total of 45 0ms
+ ✓ tests/calculations.test.js > calculateAccessibility on the Aura dataset > matches the independently calculated totals and averages for all 10 hotels 0ms
+ ✓ tests/calculations.test.js > calculateAccessibility on the Aura dataset > makes each weighted total equal the sum of its 15 contributions 2ms
+ ✓ tests/calculations.test.js > calculateAccessibility on the Aura dataset > identifies Celestial Crown Hotel as uniquely most accessible (1558) 0ms
+ ✓ tests/calculations.test.js > applyImportance and importance changes (TC-22 – TC-25) > returns a new city without modifying the original 0ms
+ ✓ tests/calculations.test.js > applyImportance and importance changes (TC-22 – TC-25) > keeps original values for places that are not overridden 0ms
+ ✓ tests/calculations.test.js > applyImportance and importance changes (TC-22 – TC-25) > increasing one importance changes that place’s contribution for every hotel and nothing else 2ms
+ ✓ tests/calculations.test.js > applyImportance and importance changes (TC-22 – TC-25) > decreasing one importance changes that place’s contribution for every hotel and nothing else 1ms
+ ✓ tests/calculations.test.js > applyImportance and importance changes (TC-22 – TC-25) > matches the independently calculated Gilded Gallery 3 → 2 results 0ms
+ ✓ tests/calculations.test.js > independence from map geometry (TC-68) > gives identical results when every map position is moved 1ms
+ ✓ tests/ranking.test.js > affordability (AC-11, AC-12, AC-23) > is affordable one unit below, exactly at, but not one unit above the budget (TC-13 – TC-15) 1ms
+ ✓ tests/ranking.test.js > affordability (AC-11, AC-12, AC-23) > calculates remaining budget and shortfall 0ms
+ ✓ tests/ranking.test.js > affordability (AC-11, AC-12, AC-23) > gives a hotel exactly on budget rank and ₹0 remaining; one unit over gets no rank 0ms
+ ✓ tests/ranking.test.js > ranking order and tie-breaks (AC-13, AC-14, AC-21, AC-22) > ranks the lower weighted total first (TC-07) 0ms
+ ✓ tests/ranking.test.js > ranking order and tie-breaks (AC-13, AC-14, AC-21, AC-22) > breaks an accessibility tie by lower stay cost, regardless of ID (TC-08) 0ms
+ ✓ tests/ranking.test.js > ranking order and tie-breaks (AC-13, AC-14, AC-21, AC-22) > breaks a full tie by ascending ASCII hotel ID (TC-09) 0ms
+ ✓ tests/ranking.test.js > ranking order and tie-breaks (AC-13, AC-14, AC-21, AC-22) > uses ASCII order, not locale order, for IDs with "-", digits and "_" 0ms
+ ✓ tests/ranking.test.js > ranking order and tie-breaks (AC-13, AC-14, AC-21, AC-22) > ranks by exact total even when displayed averages are equal (TC-06, TC-12) 0ms
+ ✓ tests/ranking.test.js > ranking order and tie-breaks (AC-13, AC-14, AC-21, AC-22) > does not depend on input order 0ms
+ ✓ tests/ranking.test.js > ranking order and tie-breaks (AC-13, AC-14, AC-21, AC-22) > compareForRanking returns 0 only for identical keys 0ms
+ ✓ tests/ranking.test.js > ranking order and tie-breaks (AC-13, AC-14, AC-21, AC-22) > applies the tie-breaks end to end through compareHotels 0ms
+ ✓ tests/ranking.test.js > ranks, visibility and recommendation > assigns unique consecutive ranks starting at 1 (TC-10) 0ms
+ ✓ tests/ranking.test.js > ranks, visibility and recommendation > keeps over-budget hotels visible, unranked, with their shortfall (TC-11) 1ms
+ ✓ tests/ranking.test.js > ranks, visibility and recommendation > recommends rank 1, never the over-budget hotel with the lowest total 0ms
+ ✓ tests/ranking.test.js > ranks, visibility and recommendation > keeps hotels in input order 0ms
+ ✓ tests/ranking.test.js > no affordable hotel (AC-15, AC-27) > returns NO_AFFORDABLE_HOTEL with no recommendation and no ranks 0ms
+ ✓ tests/ranking.test.js > no affordable hotel (AC-15, AC-27) > treats budget 0 as valid with every hotel over budget (TC-19) 0ms
+ ✓ tests/ranking.test.js > no affordable hotel (AC-15, AC-27) > matches the fixture at ₹17,999, keeping contributions and every shortfall (TC-21) 0ms
+ ✓ tests/ranking.test.js > compareHotels — Aura main scenario (AC-02, AC-03) > reproduces every hotel’s independently calculated result 0ms
+ ✓ tests/ranking.test.js > compareHotels — Aura main scenario (AC-02, AC-03) > ranks 5 affordable hotels and recommends The Meridian House 0ms
+ ✓ tests/ranking.test.js > compareHotels — Aura main scenario (AC-02, AC-03) > shows the recommendation at 2492 / 55.4 with ₹11,000 remaining 0ms
+ ✓ tests/ranking.test.js > compareHotels — Aura main scenario (AC-02, AC-03) > satisfies the decision story 1ms
+ ✓ tests/ranking.test.js > compareHotels — budget what-if (AC-08, AC-24) > makes Celestial Crown the recommendation at exactly ₹41,000 (TC-20) 0ms
+ ✓ tests/ranking.test.js > compareHotels — budget what-if (AC-08, AC-24) > keeps Celestial Crown unranked at ₹40,999 1ms
+ ✓ tests/ranking.test.js > compareHotels — budget what-if (AC-08, AC-24) > changes affordability and ranks but not contributions, totals or averages (TC-16 – TC-18) 4ms
+ ✓ tests/ranking.test.js > compareHotels — importance what-if (AC-09, AC-25) > recommends Riverside Atelier when The Gilded Gallery drops from 3 to 2 (TC-30) 2ms
+ ✓ tests/ranking.test.js > compareHotels — importance what-if (AC-09, AC-25) > restores the original result when the importance is set back to 3 2ms
+ ✓ tests/ranking.test.js > compareHotels — invalid input clears all derived results (AC-16, AC-26) > returns errors and no ranks, recommendation or contributions for budget -1 (TC-57, TC-58) 0ms
+ ✓ tests/ranking.test.js > compareHotels — invalid input clears all derived results (AC-16, AC-26) > returns errors and no ranks, recommendation or contributions for budget 1,000,001 (TC-57, TC-58) 0ms
+ ✓ tests/ranking.test.js > compareHotels — invalid input clears all derived results (AC-16, AC-26) > returns errors and no ranks, recommendation or contributions for fractional budget (TC-57, TC-58) 0ms
+ ✓ tests/ranking.test.js > compareHotels — invalid input clears all derived results (AC-16, AC-26) > returns errors and no ranks, recommendation or contributions for importance 0 (TC-57, TC-58) 0ms
+ ✓ tests/ranking.test.js > compareHotels — invalid input clears all derived results (AC-16, AC-26) > returns errors and no ranks, recommendation or contributions for importance 6 (TC-57, TC-58) 0ms
+ ✓ tests/ranking.test.js > compareHotels — invalid input clears all derived results (AC-16, AC-26) > returns errors and no ranks, recommendation or contributions for fractional importance (TC-57, TC-58) 0ms
+ ✓ tests/ranking.test.js > compareHotels — invalid input clears all derived results (AC-16, AC-26) > identifies which input is invalid 0ms
+ ✓ tests/ranking.test.js > compareHotels — invalid input clears all derived results (AC-16, AC-26) > produces no partial ranking when one record is invalid among valid ones (TC-59) 1ms
+ ✓ tests/ranking.test.js > compareHotels — invalid input clears all derived results (AC-16, AC-26) > rejects a duplicate-ID scenario (AC-17) 1ms
+ ✓ tests/ranking.test.js > compareHotels — invalid input clears all derived results (AC-16, AC-26) > calculates a fresh valid comparison once the input is corrected (TC-60) 3ms
+ ✓ tests/ranking.test.js > compareHotels — invalid input clears all derived results (AC-16, AC-26) > reports a non-object city instead of throwing 0ms
+ ✓ tests/ranking.test.js > compareHotels — purity and determinism > does not modify the city data 1ms
+ ✓ tests/ranking.test.js > compareHotels — purity and determinism > returns identical results for identical inputs 1ms
+ ✓ tests/validation.test.js > validateScenario — valid data > accepts the supplied Aura dataset at the initial budget 3ms
+ ✓ tests/validation.test.js > validateScenario — valid data > accepts the minimum (2 hotels, 3 places) and maximum (10 hotels, 15 places) sizes 0ms
+ ✓ tests/validation.test.js > validateScenario — valid data > accepts every inclusive numeric bound 0ms
+ ✓ tests/validation.test.js > validateScenario — valid data > does not modify the input 1ms
+ ✓ tests/validation.test.js > validateScenario — counts > rejects fewer than 2 hotels (TC-31) 0ms
+ ✓ tests/validation.test.js > validateScenario — counts > rejects more than 10 hotels (TC-32) 0ms
+ ✓ tests/validation.test.js > validateScenario — counts > rejects fewer than 3 places (TC-33) 0ms
+ ✓ tests/validation.test.js > validateScenario — counts > rejects more than 15 places (TC-34) 0ms
+ ✓ tests/validation.test.js > validateScenario — counts > rejects missing hotel or place lists without throwing 0ms
+ ✓ tests/validation.test.js > validateScenario — counts > rejects a non-object city 0ms
+ ✓ tests/validation.test.js > validateScenario — IDs > rejects duplicate hotel IDs (TC-35, AC-17) 0ms
+ ✓ tests/validation.test.js > validateScenario — IDs > rejects duplicate place IDs (TC-36) 0ms
+ ✓ tests/validation.test.js > validateScenario — IDs > rejects a hotel ID equal to a place ID (TC-37) 0ms
+ ✓ tests/validation.test.js > validateScenario — IDs > rejects a hotel or place ID equal to the city ID 0ms
+ ✓ tests/validation.test.js > validateScenario — IDs > rejects an ID that starts with a lowercase letter (TC-38) 0ms
+ ✓ tests/validation.test.js > validateScenario — IDs > rejects an ID that starts with a number (TC-39) 0ms
+ ✓ tests/validation.test.js > validateScenario — IDs > rejects an ID that contains an unsupported character (TC-40) 0ms
+ ✓ tests/validation.test.js > validateScenario — IDs > rejects an ID that is longer than 16 characters (TC-41) 1ms
+ ✓ tests/validation.test.js > validateScenario — IDs > rejects an ID that is empty 0ms
+ ✓ tests/validation.test.js > validateScenario — IDs > rejects an ID that is not a string 0ms
+ ✓ tests/validation.test.js > validateScenario — IDs > accepts the valid ID HOTEL1 0ms
+ ✓ tests/validation.test.js > validateScenario — IDs > accepts the valid ID CLOCK_TOWER 0ms
+ ✓ tests/validation.test.js > validateScenario — IDs > accepts the valid ID FOOD-01 0ms
+ ✓ tests/validation.test.js > validateScenario — IDs > accepts the valid ID A 0ms
+ ✓ tests/validation.test.js > validateScenario — IDs > accepts the valid ID A234567890123456 0ms
+ ✓ tests/validation.test.js > validateScenario — IDs > rejects a malformed city ID 1ms
+ ✓ tests/validation.test.js > validateScenario — names and types > rejects empty hotel name (TC-42) 1ms
+ ✓ tests/validation.test.js > validateScenario — names and types > rejects empty place name (TC-43) 0ms
+ ✓ tests/validation.test.js > validateScenario — names and types > rejects whitespace-only name (TC-44) 0ms
+ ✓ tests/validation.test.js > validateScenario — names and types > rejects missing name 0ms
+ ✓ tests/validation.test.js > validateScenario — names and types > rejects unsupported place type (TC-45) 0ms
+ ✓ tests/validation.test.js > validateScenario — names and types > rejects wrongly cased place type 0ms
+ ✓ tests/validation.test.js > validateScenario — names and types > accepts a name with surrounding whitespace around real text 0ms
+ ✓ tests/validation.test.js > validateScenario — numeric bounds > rejects stay cost 0 (TC-46) 0ms
+ ✓ tests/validation.test.js > validateScenario — numeric bounds > rejects stay cost 1,000,001 (TC-47) 0ms
+ ✓ tests/validation.test.js > validateScenario — numeric bounds > rejects fractional stay cost (TC-48) 0ms
+ ✓ tests/validation.test.js > validateScenario — numeric bounds > rejects stay cost given as a string 0ms
+ ✓ tests/validation.test.js > validateScenario — numeric bounds > rejects travel time 0 (TC-49) 0ms
+ ✓ tests/validation.test.js > validateScenario — numeric bounds > rejects travel time 601 (TC-50) 0ms
+ ✓ tests/validation.test.js > validateScenario — numeric bounds > rejects fractional travel time (TC-51) 0ms
+ ✓ tests/validation.test.js > validateScenario — numeric bounds > rejects missing value 0ms
+ ✓ tests/validation.test.js > validateScenario — numeric bounds > rejects importance 0 (TC-27) 0ms
+ ✓ tests/validation.test.js > validateScenario — numeric bounds > rejects importance 6 (TC-28) 0ms
+ ✓ tests/validation.test.js > validateScenario — numeric bounds > rejects fractional importance (TC-29) 0ms
+ ✓ tests/validation.test.js > validateScenario — numeric bounds > rejects budget -1 (TC-54) 0ms
+ ✓ tests/validation.test.js > validateScenario — numeric bounds > rejects budget 1,000,001 (TC-55) 0ms
+ ✓ tests/validation.test.js > validateScenario — numeric bounds > rejects fractional budget (TC-56) 0ms
+ ✓ tests/validation.test.js > validateScenario — numeric bounds > rejects NaN budget 0ms
+ ✓ tests/validation.test.js > validateScenario — numeric bounds > rejects empty-string budget 0ms
+ ✓ tests/validation.test.js > validateScenario — travel-time mappings (AC-18) > rejects a mapping that misses a wishlist place (TC-52) 0ms
+ ✓ tests/validation.test.js > validateScenario — travel-time mappings (AC-18) > rejects a mapping with an unknown place ID (TC-53) 0ms
+ ✓ tests/validation.test.js > validateScenario — travel-time mappings (AC-18) > rejects a mapping where one ID was replaced by another (missing + unknown) 0ms
+ ✓ tests/validation.test.js > validateScenario — travel-time mappings (AC-18) > rejects a missing or non-object mapping 0ms
+ ✓ tests/validation.test.js > validateScenario — map coordinates > rejects x below 0 0ms
+ ✓ tests/validation.test.js > validateScenario — map coordinates > rejects y above 100 0ms
+ ✓ tests/validation.test.js > validateScenario — map coordinates > rejects non-numeric coordinates 0ms
+ ✓ tests/validation.test.js > validateScenario — map coordinates > rejects a missing place map position 0ms
+ ✓ tests/validation.test.js > validateScenario — reporting > reports every problem at once, not just the first 0ms
+ ✓ tests/validation.test.js > validateScenario — reporting > gives every error a readable message 0ms
+ ✓ tests/validation.test.js > validateBudget and validateImportance > accepts budget 0 0ms
+ ✓ tests/validation.test.js > validateBudget and validateImportance > accepts budget 1 0ms
+ ✓ tests/validation.test.js > validateBudget and validateImportance > accepts budget 33000 0ms
+ ✓ tests/validation.test.js > validateBudget and validateImportance > accepts budget 1000000 0ms
+ ✓ tests/validation.test.js > validateBudget and validateImportance > rejects budget -1 0ms
+ ✓ tests/validation.test.js > validateBudget and validateImportance > rejects budget 1000001 0ms
+ ✓ tests/validation.test.js > validateBudget and validateImportance > rejects budget 0.5 0ms
+ ✓ tests/validation.test.js > validateBudget and validateImportance > rejects budget 33000 0ms
+ ✓ tests/validation.test.js > validateBudget and validateImportance > rejects budget null 0ms
+ ✓ tests/validation.test.js > validateBudget and validateImportance > rejects budget undefined 0ms
+ ✓ tests/validation.test.js > validateBudget and validateImportance > rejects budget Infinity 0ms
+ ✓ tests/validation.test.js > validateBudget and validateImportance > accepts importance 1 0ms
+ ✓ tests/validation.test.js > validateBudget and validateImportance > accepts importance 2 0ms
+ ✓ tests/validation.test.js > validateBudget and validateImportance > accepts importance 3 0ms
+ ✓ tests/validation.test.js > validateBudget and validateImportance > accepts importance 4 0ms
+ ✓ tests/validation.test.js > validateBudget and validateImportance > accepts importance 5 0ms
+ ✓ tests/validation.test.js > validateBudget and validateImportance > rejects importance 0 0ms
+ ✓ tests/validation.test.js > validateBudget and validateImportance > rejects importance 6 0ms
+ ✓ tests/validation.test.js > validateBudget and validateImportance > rejects importance 2.5 0ms
+ ✓ tests/validation.test.js > validateBudget and validateImportance > rejects importance -1 0ms
+ ✓ tests/validation.test.js > validateBudget and validateImportance > rejects importance 3 0ms
+ ✓ tests/validation.test.js > validateBudget and validateImportance > rejects importance null 0ms
+ ✓ tests/useComparator.test.jsx > before loading > exposes no city and no comparison 21ms
+ ✓ tests/useComparator.test.jsx > before loading > ignores edits until a city is loaded 3ms
+ ✓ tests/useComparator.test.jsx > loadCity > loads the complete Aura scenario in one action 6ms
+ ✓ tests/useComparator.test.jsx > loadCity > produces the independently verified initial comparison 2ms
+ ✓ tests/useComparator.test.jsx > loadCity > inspects The Meridian House by default 7ms
+ ✓ tests/useComparator.test.jsx > budget updates > recalculates affordability, ranking and recommendation but not accessibility (AC-24) 3ms
+ ✓ tests/useComparator.test.jsx > budget updates > treats a hotel costing exactly the budget as affordable and one unit over as unranked 1ms
+ ✓ tests/useComparator.test.jsx > budget updates > accepts numeric text from an input field 1ms
+ ✓ tests/useComparator.test.jsx > budget updates > reaches the no-affordable state as a valid result, not an error 1ms
+ ✓ tests/useComparator.test.jsx > invalid budget > rejects empty text and clears every derived result 2ms
+ ✓ tests/useComparator.test.jsx > invalid budget > rejects whitespace and clears every derived result 1ms
+ ✓ tests/useComparator.test.jsx > invalid budget > rejects non-numeric text and clears every derived result 1ms
+ ✓ tests/useComparator.test.jsx > invalid budget > rejects a negative number and clears every derived result 0ms
+ ✓ tests/useComparator.test.jsx > invalid budget > rejects more than 1,000,000 and clears every derived result 0ms
+ ✓ tests/useComparator.test.jsx > invalid budget > rejects a fraction and clears every derived result 0ms
+ ✓ tests/useComparator.test.jsx > invalid budget > rejects exponent notation and clears every derived result 0ms
+ ✓ tests/useComparator.test.jsx > invalid budget > rejects a thousands separator and clears every derived result 0ms
+ ✓ tests/useComparator.test.jsx > invalid budget > never turns empty input into a budget of 0 1ms
+ ✓ tests/useComparator.test.jsx > invalid budget > recovers with fresh results once corrected 1ms
+ ✓ tests/useComparator.test.jsx > importance updates > recommends Riverside Atelier when The Gilded Gallery drops from 3 to 2 (AC-09) 1ms
+ ✓ tests/useComparator.test.jsx > importance updates > changes only the edited place and keeps every other importance 0ms
+ ✓ tests/useComparator.test.jsx > importance updates > updates the inspected hotel’s contribution for that place (AC-25) 0ms
+ ✓ tests/useComparator.test.jsx > importance updates > ignores unknown place IDs 11ms
+ ✓ tests/useComparator.test.jsx > invalid importance > rejects 0 and clears every derived result 5ms
+ ✓ tests/useComparator.test.jsx > invalid importance > rejects 6 and clears every derived result 1ms
+ ✓ tests/useComparator.test.jsx > invalid importance > rejects a fraction and clears every derived result 1ms
+ ✓ tests/useComparator.test.jsx > invalid importance > rejects empty text and clears every derived result 1ms
+ ✓ tests/useComparator.test.jsx > invalid importance > rejects non-numeric text and clears every derived result 1ms
+ ✓ tests/useComparator.test.jsx > invalid importance > recovers once corrected 1ms
+ ✓ tests/useComparator.test.jsx > invalid importance > reports budget and importance errors together 4ms
+ ✓ tests/useComparator.test.jsx > hotel selection > inspects any hotel, including an over-budget one 13ms
+ ✓ tests/useComparator.test.jsx > hotel selection > does not re-run or change the comparison (AC-28) 1ms
+ ✓ tests/useComparator.test.jsx > hotel selection > keeps the current selection when given an unknown ID 1ms
+ ✓ tests/useComparator.test.jsx > hotel selection > keeps the current selection when given a place ID 0ms
+ ✓ tests/useComparator.test.jsx > hotel selection > keeps the current selection when given undefined 5ms
+ ✓ tests/useComparator.test.jsx > hotel selection > keeps the selection through an invalid edit but exposes no stale details 1ms
+ ✓ tests/useComparator.test.jsx > reset (AC-10, AC-29) > restores the full original scenario after budget, importance and selection changes 3ms
+ ✓ tests/useComparator.test.jsx > reset (AC-10, AC-29) > restores the baseline from an invalid state 4ms
+ ✓ tests/useComparator.test.jsx > reset (AC-10, AC-29) > gives identical results on repeated resets and never modifies the dataset (TC-73) 4ms
+ ✓ tests/useComparator.test.jsx > toNumberInput > converts "41000" to 41000 0ms
+ ✓ tests/useComparator.test.jsx > toNumberInput > converts " 2 " to 2 0ms
+ ✓ tests/useComparator.test.jsx > toNumberInput > converts "-1" to -1 0ms
+ ✓ tests/useComparator.test.jsx > toNumberInput > converts "33000.5" to 33000.5 0ms
+ ✓ tests/useComparator.test.jsx > toNumberInput > converts 7 to 7 0ms
+ ✓ tests/useComparator.test.jsx > toNumberInput > leaves "" unchanged 0ms
+ ✓ tests/useComparator.test.jsx > toNumberInput > leaves "  " unchanged 0ms
+ ✓ tests/useComparator.test.jsx > toNumberInput > leaves "abc" unchanged 0ms
+ ✓ tests/useComparator.test.jsx > toNumberInput > leaves "1e3" unchanged 0ms
+ ✓ tests/useComparator.test.jsx > toNumberInput > leaves "0x10" unchanged 0ms
+ ✓ tests/useComparator.test.jsx > toNumberInput > leaves "33,000" unchanged 0ms
+ ✓ tests/useComparator.test.jsx > toNumberInput > leaves "+5" unchanged 0ms
+ ✓ tests/useComparator.test.jsx > toNumberInput > leaves null unchanged 0ms
+ ✓ tests/useComparator.test.jsx > toNumberInput > leaves undefined unchanged 0ms
+ ✓ tests/Dashboard.test.jsx > initial empty state > shows only a Load Aura City action and no comparison 66ms
+ ✓ tests/Dashboard.test.jsx > after loading Aura City > shows the city, currency and original budget 126ms
+ ✓ tests/Dashboard.test.jsx > after loading Aura City > recommends The Meridian House with its totals 41ms
+ ✓ tests/Dashboard.test.jsx > after loading Aura City > lists all 10 hotels: 5 ranked, 5 over budget without a rank 74ms
+ ✓ tests/Dashboard.test.jsx > after loading Aura City > marks the recommendation with text, not colour alone 55ms
+ ✓ tests/Dashboard.test.jsx > after loading Aura City > inspects the recommended hotel by default 67ms
+ ✓ tests/Dashboard.test.jsx > after loading Aura City > renders all 25 labelled map markers 49ms
+ ✓ tests/Dashboard.test.jsx > after loading Aura City > draws only the inspected hotel’s 15 comparison links, labelled with time and contribution 34ms
+ ✓ tests/Dashboard.test.jsx > after loading Aura City > states that the map is schematic and links are not routes 28ms
+ ✓ tests/Dashboard.test.jsx > after loading Aura City > shows all 15 places in the contribution breakdown with type, importance, time and contribution 192ms
+ ✓ tests/Dashboard.test.jsx > after loading Aura City > shows the full 10 × 15 travel-time table 62ms
+ ✓ tests/Dashboard.test.jsx > hotel selection > updates details, breakdown and map links for an over-budget hotel 92ms
+ ✓ tests/Dashboard.test.jsx > hotel selection > does not change the recommendation or ranking 66ms
+ ✓ tests/Dashboard.test.jsx > hotel selection > can also be done from the travel-time table, keeping both views in sync 84ms
+ ✓ tests/Dashboard.test.jsx > budget control > recommends Celestial Crown at exactly ₹41,000 without changing contributions 137ms
+ ✓ tests/Dashboard.test.jsx > budget control > shows Celestial Crown over budget by ₹1 at ₹40,999 142ms
+ ✓ tests/Dashboard.test.jsx > budget control > rejects invalid text visibly, keeps it for correction and clears every derived result 144ms
+ ✓ tests/Dashboard.test.jsx > budget control > never treats an empty budget as ₹0 95ms
+ ✓ tests/Dashboard.test.jsx > budget control > recovers when the budget is corrected 146ms
+ ✓ tests/Dashboard.test.jsx > budget control > shows NO_AFFORDABLE_HOTEL with shortfalls and no ranks when nothing fits 117ms
+ ✓ tests/Dashboard.test.jsx > importance editing > recommends Riverside Atelier when The Gilded Gallery drops from 3 to 2 87ms
+ ✓ tests/Dashboard.test.jsx > importance editing > updates the breakdown and map link labels for the edited place 118ms
+ ✓ tests/Dashboard.test.jsx > importance editing > rejects an invalid importance next to its input and clears derived results 113ms
+ ✓ tests/Dashboard.test.jsx > reset > restores the budget, importance, inspected hotel, ranking and recommendation 299ms
+ ✓ tests/Dashboard.test.jsx > reset > restores a valid comparison from an invalid state 122ms
+
+ Test Files  7 passed (7)
+      Tests  230 passed (230)
+   Start at  20:22:29
+   Duration  3.96s (transform 282ms, setup 529ms, collect 809ms, tests 2.73s, environment 4.07s, prepare 738ms)
+
+exit code: 0
