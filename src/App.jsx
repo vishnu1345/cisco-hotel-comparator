@@ -1,8 +1,8 @@
 /**
  * App.jsx — root application component.
  *
- * Initializes the Dashboard. Stage 1: placeholder only.
- * UI is assembled in Stage 4.
+ * Renders the Dashboard, which owns the useComparator hook and lays out the
+ * comparison workspace.
  */
 import Dashboard from './components/Dashboard'
 
