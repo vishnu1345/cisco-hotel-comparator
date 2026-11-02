@@ -1,0 +1,241 @@
+{
+    "scenario": "Aura Hotel Base-Camp Comparator",
+    "initial_configuration": {
+        "budget": 33000,
+        "importance_total": 45,
+        "affordable_hotel_count": 5,
+        "unique_most_accessible_hotel": "HOTEL_AURA_01",
+        "recommended_hotel": "HOTEL_AURA_03",
+        "cheapest_affordable_hotel": "HOTEL_AURA_02"
+    },
+    "initial_results": [
+        {
+            "hotel_id": "HOTEL_AURA_01",
+            "hotel_name": "Celestial Crown Hotel",
+            "weighted_travel_total": 1558,
+            "weighted_average_minutes": 34.6,
+            "affordable": false,
+            "budget_shortfall": 8000,
+            "rank": null
+        },
+        {
+            "hotel_id": "HOTEL_AURA_02",
+            "hotel_name": "Juniper Lane Inn",
+            "weighted_travel_total": 3159,
+            "weighted_average_minutes": 70.2,
+            "affordable": true,
+            "remaining_budget": 15000,
+            "rank": 4
+        },
+        {
+            "hotel_id": "HOTEL_AURA_03",
+            "hotel_name": "The Meridian House",
+            "weighted_travel_total": 2492,
+            "weighted_average_minutes": 55.4,
+            "affordable": true,
+            "remaining_budget": 11000,
+            "rank": 1
+        },
+        {
+            "hotel_id": "HOTEL_AURA_04",
+            "hotel_name": "Riverside Atelier",
+            "weighted_travel_total": 2546,
+            "weighted_average_minutes": 56.6,
+            "affordable": true,
+            "remaining_budget": 8000,
+            "rank": 2
+        },
+        {
+            "hotel_id": "HOTEL_AURA_05",
+            "hotel_name": "Amber Courtyard Hotel",
+            "weighted_travel_total": 2975,
+            "weighted_average_minutes": 66.1,
+            "affordable": true,
+            "remaining_budget": 4000,
+            "rank": 3
+        },
+        {
+            "hotel_id": "HOTEL_AURA_06",
+            "hotel_name": "Northstar Lodge",
+            "weighted_travel_total": 3456,
+            "weighted_average_minutes": 76.8,
+            "affordable": true,
+            "remaining_budget": 0,
+            "rank": 5
+        },
+        {
+            "hotel_id": "HOTEL_AURA_07",
+            "hotel_name": "Velvet Quay Suites",
+            "weighted_travel_total": 2952,
+            "weighted_average_minutes": 65.6,
+            "affordable": false,
+            "budget_shortfall": 3000,
+            "rank": null
+        },
+        {
+            "hotel_id": "HOTEL_AURA_08",
+            "hotel_name": "The Lantern Residence",
+            "weighted_travel_total": 2962,
+            "weighted_average_minutes": 65.8,
+            "affordable": false,
+            "budget_shortfall": 12000,
+            "rank": null
+        },
+        {
+            "hotel_id": "HOTEL_AURA_09",
+            "hotel_name": "Skyline Pavilion",
+            "weighted_travel_total": 3079,
+            "weighted_average_minutes": 68.4,
+            "affordable": false,
+            "budget_shortfall": 17000,
+            "rank": null
+        },
+        {
+            "hotel_id": "HOTEL_AURA_10",
+            "hotel_name": "Orchid Gate Hotel",
+            "weighted_travel_total": 2798,
+            "weighted_average_minutes": 62.2,
+            "affordable": false,
+            "budget_shortfall": 22000,
+            "rank": null
+        }
+    ],
+    "initial_ranking": [
+        "HOTEL_AURA_03",
+        "HOTEL_AURA_04",
+        "HOTEL_AURA_05",
+        "HOTEL_AURA_02",
+        "HOTEL_AURA_06"
+    ],
+    "initial_recommendation": "HOTEL_AURA_03",
+    "travel_time_conditions": {
+        "all_trips_at_most_90_minutes": {
+            "hotel_id": "HOTEL_AURA_03",
+            "maximum_round_trip_minutes": 88
+        },
+        "at_least_one_trip_over_90_minutes": {
+            "hotel_id": "HOTEL_AURA_04",
+            "maximum_round_trip_minutes": 115
+        }
+    },
+    "budget_change_scenario": {
+        "new_budget": 41000,
+        "boundary_hotel": "HOTEL_AURA_01",
+        "new_recommendation": "HOTEL_AURA_01",
+        "new_ranking": [
+            "HOTEL_AURA_01",
+            "HOTEL_AURA_03",
+            "HOTEL_AURA_04",
+            "HOTEL_AURA_07",
+            "HOTEL_AURA_05",
+            "HOTEL_AURA_02",
+            "HOTEL_AURA_06"
+        ]
+    },
+    "importance_change_scenario": {
+        "changed_place_id": "PLACE_GILDED_01",
+        "changed_place_name": "The Gilded Gallery",
+        "original_importance": 3,
+        "new_importance": 1,
+        "new_importance_total": 43,
+        "new_recommendation": "HOTEL_AURA_04",
+        "new_results": [
+            {
+                "hotel_id": "HOTEL_AURA_01",
+                "weighted_travel_total": 1502,
+                "weighted_average_minutes": 34.9,
+                "affordable": false,
+                "rank": null
+            },
+            {
+                "hotel_id": "HOTEL_AURA_02",
+                "weighted_travel_total": 3087,
+                "weighted_average_minutes": 71.8,
+                "affordable": true,
+                "rank": 4
+            },
+            {
+                "hotel_id": "HOTEL_AURA_03",
+                "weighted_travel_total": 2446,
+                "weighted_average_minutes": 56.9,
+                "affordable": true,
+                "rank": 2
+            },
+            {
+                "hotel_id": "HOTEL_AURA_04",
+                "weighted_travel_total": 2356,
+                "weighted_average_minutes": 54.8,
+                "affordable": true,
+                "rank": 1
+            },
+            {
+                "hotel_id": "HOTEL_AURA_05",
+                "weighted_travel_total": 2933,
+                "weighted_average_minutes": 68.2,
+                "affordable": true,
+                "rank": 3
+            },
+            {
+                "hotel_id": "HOTEL_AURA_06",
+                "weighted_travel_total": 3396,
+                "weighted_average_minutes": 79.0,
+                "affordable": true,
+                "rank": 5
+            },
+            {
+                "hotel_id": "HOTEL_AURA_07",
+                "weighted_travel_total": 2768,
+                "weighted_average_minutes": 64.4,
+                "affordable": false,
+                "rank": null
+            },
+            {
+                "hotel_id": "HOTEL_AURA_08",
+                "weighted_travel_total": 2740,
+                "weighted_average_minutes": 63.7,
+                "affordable": false,
+                "rank": null
+            },
+            {
+                "hotel_id": "HOTEL_AURA_09",
+                "weighted_travel_total": 2911,
+                "weighted_average_minutes": 67.7,
+                "affordable": false,
+                "rank": null
+            },
+            {
+                "hotel_id": "HOTEL_AURA_10",
+                "weighted_travel_total": 2742,
+                "weighted_average_minutes": 63.8,
+                "affordable": false,
+                "rank": null
+            }
+        ],
+        "new_ranking": [
+            "HOTEL_AURA_04",
+            "HOTEL_AURA_03",
+            "HOTEL_AURA_05",
+            "HOTEL_AURA_02",
+            "HOTEL_AURA_06"
+        ]
+    },
+    "verification": {
+        "hotel_count": 10,
+        "wishlist_place_count": 15,
+        "total_marker_count": 25,
+        "travel_matrix_entries": 150,
+        "attraction_count": 9,
+        "food_stop_count": 6,
+        "all_ids_globally_unique": true,
+        "all_ids_match_required_pattern": true,
+        "all_costs_within_range": true,
+        "all_travel_times_within_range": true,
+        "all_hotels_have_complete_travel_matrix": true,
+        "initial_affordable_count_is_4_to_7": true,
+        "unique_lowest_accessibility_hotel_is_over_budget": true,
+        "recommended_hotel_is_not_cheapest_affordable": true,
+        "both_90_minute_conditions_satisfied": true,
+        "budget_boundary_changes_recommendation": true,
+        "importance_change_changes_recommendation": true
+    }
+}

@@ -1,0 +1,427 @@
+{
+    "city": {
+        "id": "AURA",
+        "name": "Aura",
+        "currency": "INR",
+        "initial_budget": 33000,
+        "map": {
+            "type": "schematic",
+            "coordinate_system": "normalized_100x100",
+            "note": "Presentation-only coordinates. Never use map geometry to calculate travel time, accessibility, or ranking."
+        },
+        "hotels": [
+            {
+                "id": "HOTEL_AURA_01",
+                "name": "Celestial Crown Hotel",
+                "stay_cost": 41000,
+                "map_position": {
+                    "x": 50,
+                    "y": 50
+                },
+                "round_trip_minutes": {
+                    "PLACE_CROWN_01": 51,
+                    "PLACE_MUSEUM_01": 45,
+                    "PLACE_GILDED_01": 28,
+                    "PLACE_RIVER_01": 26,
+                    "PLACE_OBS_01": 51,
+                    "PLACE_NIGHT_01": 29,
+                    "PLACE_GARDEN_01": 28,
+                    "PLACE_FORT_01": 55,
+                    "PLACE_BRIDGE_01": 35,
+                    "PLACE_TEMPLE_01": 46,
+                    "PLACE_SPICE_01": 21,
+                    "PLACE_DUMP_01": 28,
+                    "PLACE_CAFE_01": 18,
+                    "PLACE_NOODLE_01": 40,
+                    "PLACE_SWEET_01": 47
+                }
+            },
+            {
+                "id": "HOTEL_AURA_02",
+                "name": "Juniper Lane Inn",
+                "stay_cost": 18000,
+                "map_position": {
+                    "x": 35,
+                    "y": 20
+                },
+                "round_trip_minutes": {
+                    "PLACE_CROWN_01": 96,
+                    "PLACE_MUSEUM_01": 31,
+                    "PLACE_GILDED_01": 36,
+                    "PLACE_RIVER_01": 103,
+                    "PLACE_OBS_01": 54,
+                    "PLACE_NIGHT_01": 114,
+                    "PLACE_GARDEN_01": 109,
+                    "PLACE_FORT_01": 23,
+                    "PLACE_BRIDGE_01": 22,
+                    "PLACE_TEMPLE_01": 37,
+                    "PLACE_SPICE_01": 77,
+                    "PLACE_DUMP_01": 21,
+                    "PLACE_CAFE_01": 119,
+                    "PLACE_NOODLE_01": 54,
+                    "PLACE_SWEET_01": 97
+                }
+            },
+            {
+                "id": "HOTEL_AURA_03",
+                "name": "The Meridian House",
+                "stay_cost": 22000,
+                "map_position": {
+                    "x": 48,
+                    "y": 40
+                },
+                "round_trip_minutes": {
+                    "PLACE_CROWN_01": 42,
+                    "PLACE_MUSEUM_01": 84,
+                    "PLACE_GILDED_01": 23,
+                    "PLACE_RIVER_01": 39,
+                    "PLACE_OBS_01": 73,
+                    "PLACE_NIGHT_01": 76,
+                    "PLACE_GARDEN_01": 35,
+                    "PLACE_FORT_01": 23,
+                    "PLACE_BRIDGE_01": 43,
+                    "PLACE_TEMPLE_01": 73,
+                    "PLACE_SPICE_01": 88,
+                    "PLACE_DUMP_01": 61,
+                    "PLACE_CAFE_01": 49,
+                    "PLACE_NOODLE_01": 38,
+                    "PLACE_SWEET_01": 71
+                }
+            },
+            {
+                "id": "HOTEL_AURA_04",
+                "name": "Riverside Atelier",
+                "stay_cost": 25000,
+                "map_position": {
+                    "x": 60,
+                    "y": 55
+                },
+                "round_trip_minutes": {
+                    "PLACE_CROWN_01": 28,
+                    "PLACE_MUSEUM_01": 49,
+                    "PLACE_GILDED_01": 95,
+                    "PLACE_RIVER_01": 115,
+                    "PLACE_OBS_01": 81,
+                    "PLACE_NIGHT_01": 25,
+                    "PLACE_GARDEN_01": 41,
+                    "PLACE_FORT_01": 82,
+                    "PLACE_BRIDGE_01": 114,
+                    "PLACE_TEMPLE_01": 113,
+                    "PLACE_SPICE_01": 35,
+                    "PLACE_DUMP_01": 32,
+                    "PLACE_CAFE_01": 78,
+                    "PLACE_NOODLE_01": 89,
+                    "PLACE_SWEET_01": 23
+                }
+            },
+            {
+                "id": "HOTEL_AURA_05",
+                "name": "Amber Courtyard Hotel",
+                "stay_cost": 29000,
+                "map_position": {
+                    "x": 25,
+                    "y": 65
+                },
+                "round_trip_minutes": {
+                    "PLACE_CROWN_01": 53,
+                    "PLACE_MUSEUM_01": 102,
+                    "PLACE_GILDED_01": 21,
+                    "PLACE_RIVER_01": 108,
+                    "PLACE_OBS_01": 25,
+                    "PLACE_NIGHT_01": 25,
+                    "PLACE_GARDEN_01": 47,
+                    "PLACE_FORT_01": 100,
+                    "PLACE_BRIDGE_01": 55,
+                    "PLACE_TEMPLE_01": 59,
+                    "PLACE_SPICE_01": 62,
+                    "PLACE_DUMP_01": 86,
+                    "PLACE_CAFE_01": 122,
+                    "PLACE_NOODLE_01": 87,
+                    "PLACE_SWEET_01": 22
+                }
+            },
+            {
+                "id": "HOTEL_AURA_06",
+                "name": "Northstar Lodge",
+                "stay_cost": 33000,
+                "map_position": {
+                    "x": 70,
+                    "y": 30
+                },
+                "round_trip_minutes": {
+                    "PLACE_CROWN_01": 49,
+                    "PLACE_MUSEUM_01": 39,
+                    "PLACE_GILDED_01": 30,
+                    "PLACE_RIVER_01": 88,
+                    "PLACE_OBS_01": 79,
+                    "PLACE_NIGHT_01": 101,
+                    "PLACE_GARDEN_01": 116,
+                    "PLACE_FORT_01": 105,
+                    "PLACE_BRIDGE_01": 68,
+                    "PLACE_TEMPLE_01": 53,
+                    "PLACE_SPICE_01": 119,
+                    "PLACE_DUMP_01": 32,
+                    "PLACE_CAFE_01": 109,
+                    "PLACE_NOODLE_01": 67,
+                    "PLACE_SWEET_01": 53
+                }
+            },
+            {
+                "id": "HOTEL_AURA_07",
+                "name": "Velvet Quay Suites",
+                "stay_cost": 36000,
+                "map_position": {
+                    "x": 82,
+                    "y": 55
+                },
+                "round_trip_minutes": {
+                    "PLACE_CROWN_01": 55,
+                    "PLACE_MUSEUM_01": 33,
+                    "PLACE_GILDED_01": 92,
+                    "PLACE_RIVER_01": 121,
+                    "PLACE_OBS_01": 121,
+                    "PLACE_NIGHT_01": 23,
+                    "PLACE_GARDEN_01": 53,
+                    "PLACE_FORT_01": 62,
+                    "PLACE_BRIDGE_01": 80,
+                    "PLACE_TEMPLE_01": 108,
+                    "PLACE_SPICE_01": 113,
+                    "PLACE_DUMP_01": 50,
+                    "PLACE_CAFE_01": 34,
+                    "PLACE_NOODLE_01": 90,
+                    "PLACE_SWEET_01": 78
+                }
+            },
+            {
+                "id": "HOTEL_AURA_08",
+                "name": "The Lantern Residence",
+                "stay_cost": 45000,
+                "map_position": {
+                    "x": 20,
+                    "y": 42
+                },
+                "round_trip_minutes": {
+                    "PLACE_CROWN_01": 66,
+                    "PLACE_MUSEUM_01": 50,
+                    "PLACE_GILDED_01": 111,
+                    "PLACE_RIVER_01": 74,
+                    "PLACE_OBS_01": 54,
+                    "PLACE_NIGHT_01": 29,
+                    "PLACE_GARDEN_01": 62,
+                    "PLACE_FORT_01": 58,
+                    "PLACE_BRIDGE_01": 74,
+                    "PLACE_TEMPLE_01": 56,
+                    "PLACE_SPICE_01": 81,
+                    "PLACE_DUMP_01": 98,
+                    "PLACE_CAFE_01": 29,
+                    "PLACE_NOODLE_01": 102,
+                    "PLACE_SWEET_01": 38
+                }
+            },
+            {
+                "id": "HOTEL_AURA_09",
+                "name": "Skyline Pavilion",
+                "stay_cost": 50000,
+                "map_position": {
+                    "x": 68,
+                    "y": 82
+                },
+                "round_trip_minutes": {
+                    "PLACE_CROWN_01": 43,
+                    "PLACE_MUSEUM_01": 108,
+                    "PLACE_GILDED_01": 84,
+                    "PLACE_RIVER_01": 23,
+                    "PLACE_OBS_01": 83,
+                    "PLACE_NIGHT_01": 78,
+                    "PLACE_GARDEN_01": 112,
+                    "PLACE_FORT_01": 24,
+                    "PLACE_BRIDGE_01": 40,
+                    "PLACE_TEMPLE_01": 96,
+                    "PLACE_SPICE_01": 69,
+                    "PLACE_DUMP_01": 50,
+                    "PLACE_CAFE_01": 114,
+                    "PLACE_NOODLE_01": 21,
+                    "PLACE_SWEET_01": 36
+                }
+            },
+            {
+                "id": "HOTEL_AURA_10",
+                "name": "Orchid Gate Hotel",
+                "stay_cost": 55000,
+                "map_position": {
+                    "x": 42,
+                    "y": 90
+                },
+                "round_trip_minutes": {
+                    "PLACE_CROWN_01": 24,
+                    "PLACE_MUSEUM_01": 64,
+                    "PLACE_GILDED_01": 28,
+                    "PLACE_RIVER_01": 81,
+                    "PLACE_OBS_01": 66,
+                    "PLACE_NIGHT_01": 35,
+                    "PLACE_GARDEN_01": 85,
+                    "PLACE_FORT_01": 113,
+                    "PLACE_BRIDGE_01": 101,
+                    "PLACE_TEMPLE_01": 98,
+                    "PLACE_SPICE_01": 75,
+                    "PLACE_DUMP_01": 60,
+                    "PLACE_CAFE_01": 49,
+                    "PLACE_NOODLE_01": 81,
+                    "PLACE_SWEET_01": 32
+                }
+            }
+        ],
+        "wishlist_places": [
+            {
+                "id": "PLACE_CROWN_01",
+                "name": "The Crown Arch",
+                "type": "attraction",
+                "importance": 5,
+                "map_position": {
+                    "x": 50,
+                    "y": 10
+                }
+            },
+            {
+                "id": "PLACE_MUSEUM_01",
+                "name": "Aura Museum of Light",
+                "type": "attraction",
+                "importance": 4,
+                "map_position": {
+                    "x": 72,
+                    "y": 18
+                }
+            },
+            {
+                "id": "PLACE_GILDED_01",
+                "name": "The Gilded Gallery",
+                "type": "attraction",
+                "importance": 3,
+                "map_position": {
+                    "x": 84,
+                    "y": 42
+                }
+            },
+            {
+                "id": "PLACE_RIVER_01",
+                "name": "Moonriver Promenade",
+                "type": "attraction",
+                "importance": 2,
+                "map_position": {
+                    "x": 65,
+                    "y": 78
+                }
+            },
+            {
+                "id": "PLACE_OBS_01",
+                "name": "Skyglass Observatory",
+                "type": "attraction",
+                "importance": 1,
+                "map_position": {
+                    "x": 25,
+                    "y": 12
+                }
+            },
+            {
+                "id": "PLACE_NIGHT_01",
+                "name": "Lanternfall Night Market",
+                "type": "food",
+                "importance": 5,
+                "map_position": {
+                    "x": 18,
+                    "y": 55
+                }
+            },
+            {
+                "id": "PLACE_GARDEN_01",
+                "name": "Jade Courtyard Gardens",
+                "type": "attraction",
+                "importance": 4,
+                "map_position": {
+                    "x": 40,
+                    "y": 35
+                }
+            },
+            {
+                "id": "PLACE_FORT_01",
+                "name": "Old Ember Fort",
+                "type": "attraction",
+                "importance": 3,
+                "map_position": {
+                    "x": 12,
+                    "y": 25
+                }
+            },
+            {
+                "id": "PLACE_BRIDGE_01",
+                "name": "Whispering Bridge",
+                "type": "attraction",
+                "importance": 2,
+                "map_position": {
+                    "x": 56,
+                    "y": 62
+                }
+            },
+            {
+                "id": "PLACE_TEMPLE_01",
+                "name": "Sunspire Temple",
+                "type": "attraction",
+                "importance": 1,
+                "map_position": {
+                    "x": 88,
+                    "y": 72
+                }
+            },
+            {
+                "id": "PLACE_SPICE_01",
+                "name": "Saffron Alley Kitchen",
+                "type": "food",
+                "importance": 5,
+                "map_position": {
+                    "x": 76,
+                    "y": 88
+                }
+            },
+            {
+                "id": "PLACE_DUMP_01",
+                "name": "Little Cloud Dumplings",
+                "type": "food",
+                "importance": 4,
+                "map_position": {
+                    "x": 32,
+                    "y": 82
+                }
+            },
+            {
+                "id": "PLACE_CAFE_01",
+                "name": "Copper Kettle Café",
+                "type": "food",
+                "importance": 3,
+                "map_position": {
+                    "x": 8,
+                    "y": 72
+                }
+            },
+            {
+                "id": "PLACE_NOODLE_01",
+                "name": "Blue Lantern Noodle House",
+                "type": "food",
+                "importance": 2,
+                "map_position": {
+                    "x": 92,
+                    "y": 30
+                }
+            },
+            {
+                "id": "PLACE_SWEET_01",
+                "name": "Honeycomb Sweet House",
+                "type": "food",
+                "importance": 1,
+                "map_position": {
+                    "x": 48,
+                    "y": 48
+                }
+            }
+        ]
+    }
+}
